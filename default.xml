@@ -24,6 +24,15 @@
   <remote  name="androidarmv6"
 		   fetch="https://github.com/androidarmv6/" />
 
+  <remote  name="AOKP-marvel"
+		   fetch="https://github.com/AOKP-marvel/" />
+
+  <remote  name="arco"
+		   fetch="https://github.com/arco/" />
+
+  <remote  name="WinSuk"
+		   fetch="https://github.com/WinSuk/" />
+
   <remote  name="AOKPlegacy"
 		   fetch="https://github.com/legacy-aokp/" 
 		   review="review.jellaxy.com" />
@@ -335,12 +344,12 @@
 
   <project path="packages/wallpapers/SwagPapers" name="packages_wallpapers_SwagPapers_v2" remote="AOKPlegacy" revision="jb-mr1" />
 
-<!-- cooper - Samsung Ace - specific settings -->
-  <project path="build" name="build" remote="AOKPlegacy" revision="jb-mr1" >
+<!--Marvel specific thingys -->
+  <project path="build" name="build" remote="AOKP-marvel" revision="cm-10.1" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="bionic" name="android_bionic" remote="cm" revision="cm-10.1" />
+  <project path="bionic" name="android_bionic" remote="WinSuk" revision="cm-10.1" />
   <project path="dalvik" name="android_dalvik" remote="cm" revision="cm-10.1" />
   <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" remote="caf" revision="jb_2.5" groups="default" />
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="caf" revision="jb_2.5" groups="default" />
@@ -374,12 +383,12 @@
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="cm" revision="cm-10.1" />
   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="cm" revision="cm-10.1" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="cm" revision="cm-10.1" />
-  <project path="hardware/qcom/display-legacy" name="android_hardware_qcom_display-legacy" remote="AOKPlegacy" revision="cm-10.1" />
+  <project path="hardware/qcom/display-legacy" name="android_hardware_qcom_display-legacy" remote="AOKP-marvel" revision="cm-10.1" />
   <project path="hardware/qcom/display-caf" name="android_hardware_qcom_display-caf" remote="cm" revision="cm-10.1" />
   <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="androidarmv6" revision="cm-10.1" />
   <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="cm" revision="cm-10.1" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="cm" revision="cm-10.1" />
-  <project path="hardware/qcom/media_legacy" name="android_hardware_qcom_media_legacy" remote="androidarmv6" revision="cm-10.1" />
+  <project path="hardware/qcom/media_legacy" name="android_hardware_qcom_media_legacy" remote="AOKP-marvel" revision="cm-10.1" />
   <project path="hardware/qcom/msm8960" name="android_hardware_qcom_msm8960" remote="cm" revision="cm-10.1" />
   <project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="cm" revision="cm-10.1" />
   <project path="hardware/qcom/sensors" name="android_hardware_qcom_sensors" remote="cm" revision="cm-10.1" />
@@ -396,26 +405,19 @@
   <project path="device/common" name="android_device_common" remote="cm" revision="cm-10.1" />
   <project path="device/sample" name="device/sample" />
   
-  <project path="device/samsung/gio" name="android_device_samsung_gio" remote="AOKPlegacy" revision="jb-mr1" />
-  <project path="device/samsung/cooper" name="android_device_samsung_cooper" remote="AOKPlegacy" revision="jb-mr1" />
-  <project path="device/samsung/beni" name="erikcas/android_device_samsung_beni" remote="aokp" revision="jb-mr1" />
-  <project path="device/samsung/tass" name="erikcas/android_device_samsung_tass" remote="aokp" revision="jb-mr1" />
-  <project path="device/samsung/galaxy5" name="erikcas/android_device_samsung_galaxy5" remote="aokp" revision="jb-mr1" />
+  <project path="device/htc/marvel"   name="android_device_htc_marvel" remote="AOKP-marvel" revision="master" />
 
-  <project path="device/samsung/msm7x27-common" name="android_device_samsung_msm7x27-common" remote="utak3r" revision="jb-mr1" />
-  <!-- <project path="device/samsung/msm7x27-common" name="erikcas/android_device_samsung_msm7x27-common" remote="aokp" revision="jb-mr1" />-->
-  <project path="device/qcom/msm7x27" name="erikcas/android_device_qcom_msm7x27" remote="aokp" revision="jb-mr1" />
+  <project path="device/htc/msm7x27-common" name="android_device_samsung_msm7x27-common" remote="AOKP-marvel" revision="master" />
+  <project path="device/qcom/msm7x27" name="android_device_qcom_msm7x27" remote="AOKP-marvel" revision="master" />
 
   <project path="device/mdpi-common" name="android_device_mdpi-common" remote="androidarmv6" revision="cm-10.1" />
-  <project path="device/ldpi-common" name="erikcas/android_device_ldpi-common" remote="aokp" revision="jb-mr1" />
 
 
-  <project path="kernel/samsung/msm7x27" name="android_kernel_samsung_msm7x27" remote="utak3r" revision="android-4.2.1" />
-
+  <project path="kernel/htc/msm7x27" name="OWL-Predator-KERNEL" remote="AOKP-marvel" revision="master" />
   <project path="vendor/aokp" name="vendor_aokp" remote="AOKPlegacy" revision="jb-mr1" />
-  <project path="vendor/samsung" name="android_vendor_samsung" remote="androidarmv6" revision="cm-10.1" />
-  <project path="vendor/qcom/msm7x27" name="android_vendor_qcom_msm7x27" remote="androidarmv6" revision="cm-10.1" />
+  <project path="vendor/htc/marvel" name="android_vendor_htc_marvel" remote="AOKP-marvel" revision="master" />
+  <project path="vendor/qcom/msm7x27" name="android_vendor_qcom_msm7x27" remote="AOKP-marvel" revision="master" />
   <project path="vendor/google" name="android_vendor_google" remote="AOKPlegacy" revision="cm-10.1" />
-  <project path="platform_manifest" name="platform_manifest" remote="AOKPlegacy" revision="AOKP-legacy" />
-
+  <project path="platform_manifest" name="platform_manifest" remote="AOKP-marvel" revision="AOKP-legacy" />
+  <project name="android_device_htc_common" path="device/htc/common" remote="cm" revision="refs/heads/gingerbread" />
 </manifest>
